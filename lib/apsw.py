@@ -1,4 +1,7 @@
 import abi
 import sys
 
-sys.modules[__name__] = abi.loadfile("script.module.apsw", "apsw")
+
+__m = abi.load("script.module.apsw", "apsw")
+import sys
+sys.modules[__name__] = __m
